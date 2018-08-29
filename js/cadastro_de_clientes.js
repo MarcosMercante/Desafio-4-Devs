@@ -1,7 +1,6 @@
 /* Declarando variáveis e passando valores do formulário, obtidos através do arquivo
 cadastro_de_cliente.html  */
 
-//var msgList = document.getElementById('msgList');
 var nome_do_clienteInput = document.getElementById('nome_do_clienteInput');
 var nome_do_contatoInput = document.getElementById('nome_do_contatoInput');
 var data_cadastroInput = document.getElementById('data_cadastroInput');
@@ -16,7 +15,7 @@ addButton.addEventListener('click', function () {
 }); 
 
 /* conecta com o banco de dados do google Firebase e insere os valores dos 3 campos
-contidos no cadastro */
+contidos no cadastro - categoria default "Nenhum" */
 function create(cliente, contato, data_cadastro) {
     var data = {
         cliente : cliente,
@@ -38,8 +37,6 @@ firebase.database().ref('clientes').on('value', function () {
 /* Função para cumprir que todos os campos sejam preenchidos.
 Faz a verificação de cada campo, enviando um alerta ao usuário sempre que algum campo
 for nulo. */
-
-
 
 function valida_form (){
     if((nome_do_clienteInput.value == "")||(nome_do_contatoInput.value == "")||(data_cadastroInput.value == "")){

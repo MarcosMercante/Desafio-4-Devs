@@ -1,3 +1,5 @@
+/* Declarando variáveis e passando valores do formulário, obtidos através do arquivo
+cadastro_de_cliente.html  */
 var mes_avaliacaoInput = document.getElementById('mes_avaliacaoInput');
 var ano_avaliacaoInput = document.getElementById('ano_avaliacaoInput');
 var btnCadAvaliacao = document.getElementById('btnCadAvaliacao');
