@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>DESAFIO 4 DEVS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <h3>CADASTRO DE AVALIAÇÕES</h3>
+
+        <div id="divavaliacao"  class="col-md4">
+            <form id="form1">
+                <div class="form-group">
+                    
+                    <label>Selecione o mês e ano que ocorreu a pesquisa</label>
+                    <table width=100% >
+                        <tr><td>
+                            <label>Mês da avaliação</label>
+                            <select id="mes_avaliacaoInput" class="form-control">
+                                    <option value="01">janeiro</option>
+                                    <option value="02">fevereiro</option>
+                                    <option value="03">março</option>
+                                    <option value="04">abril</option>
+                                    <option value="05">maio</option>
+                                    <option value="06">junho</option>
+                                    <option value="07">julho</option>
+                                    <option value="08">agosto</option>
+                                    <option value="09">setembro</option>
+                                    <option value="10">outubro</option>
+                                    <option value="11">novembro</option>
+                                    <option value="12">dezembro</option>
+                            </select>
+                            </td><td>
+                                    <label>Ano da avaliação</label>
+                                    <input type="text" id="ano_avaliacaoInput" class="form-control" maxlength="4" size="4" id="ano_avaliacaoInput" placeholder="aaaa">
+  
+                            </td>
+                        </tr>    
+
+                    </table>
+
+                </div>
+                <label>Selecione os clientes que participaram da pesquisa</label>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Seleção</th>
+                            <th>Nome do Cliente</th>
+                            <th>Nome do contato</th>
+                            <th>Data do cadastro</th>
+                            <th>Categoria</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbl_body">
+                        
+                    </tbody>
+                </table>  
+                <div id="tabelaList"></div>
+                <div id="status_pesquisa" class="table-primary"></div>
+                <div id="checkcount"></div>
+                <br>
+                <br>             
+                <button class="btn btn-lg btn-block btn-primary" id="btnCadAvaliacao">Cadastrar</button>
+            </form>
+        </div>
+     
+        <a href="index.html">Voltar para Home</a>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-database.js"></script>
+        <script src="js/config_firebase.js"></script>
+        <script src="js/cadastro_de_avaliacao.js"></script>
+    </body>
+</html>
